@@ -5,24 +5,24 @@ const BreweryListView = ({ breweries }) => (
   <div>
     {breweries.map((brewery, index) => (
       <Card key={index}>
-        <Image src={brewery.images.medium} />
+        <Image src={brewery.images ? brewery.images.squareMedium : ''} />
         <Card.Content>
           <Card.Header>
-            Matthew
+            {brewery.name}
           </Card.Header>
           <Card.Meta>
             <span className='date'>
-              Joined in 2015
+              {brewery.established}
             </span>
           </Card.Meta>
           <Card.Description>
-            Matthew is a musician living in Nashville.
+            {brewery.description}
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
           <a>
-            <Icon name='user' />
-            22 Friends
+            <Icon name='beer' />
+            {brewery.status}
           </a>
         </Card.Content>
       </Card>

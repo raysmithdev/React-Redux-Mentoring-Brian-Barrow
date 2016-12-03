@@ -6,7 +6,7 @@ const DataButtonView = ({ fetchBreweries }) => (
     onClick={ () => fetchBreweries() }
     primary
   >
-    Make an AJAX call
+    Show me some breweries
   </Button>
 )
 
